@@ -2,6 +2,8 @@
 var scoreEl = document.querySelector(".current-score")
 var timerEl = document.querySelector(".current-time")
 
+var scoreNum = 0
+
 
 // the button
 var btn = document.createElement("button");
@@ -31,21 +33,37 @@ function myTimer() {
     }, 1000);
 }
 
-//  The questions with choices and correct answer
-function theQuiz(params) {    
-var questions = [
-    {question: "question 1?",
-    answers: {
-        a: "blah",
-        b: "bleh",
-        c: "bloh",
-        d: "bluh"
+// //  The questions with choices and correct answer
+// function theQuiz(params) {    
+var quizQuestions = [
+    { 
+        questions: "Who is the protaginst of Resident Evil 8?",
+        options: ["Chris Redfield", "Leon S. Kennedy", "Ethan Winters", "Jill Valentine"],
+        correctAnswer: "Ethan Winters",
     },
-    correctAnswer: c,
+    { 
+        questions: "Question 2?",
+        options: ["a", "b", "c", "d"],
+        correctAnswer: "d",
+    },
+    { 
+        questions: "Question 3?",
+        options: ["a", "b", "c", "d"],
+        correctAnswer: "a",
+    }, 
+    { 
+        questions: "Question 4?",
+        options: ["a", "b", "c", "d"],
+        correctAnswer: "b",
+    },
+    { 
+        questions: "Question 5?",
+        options: ["a", "b", "c", "d"],
+        correctAnswer: "c",
     },
 ]
 
-if (questions.answer === questions.correctAnswer) {
+if (quizQuestions.options === quizQuestions.correctAnswer) {
     scoreEl++;
 } else {
     secondsRemaining - 5;
